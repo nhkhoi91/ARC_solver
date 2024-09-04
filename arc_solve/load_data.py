@@ -7,8 +7,7 @@ def get_arc_data_dir():
     Get the path to the ARC data directory.
     """
     current_dir = os.getcwd()
-    arc_root = os.path.dirname(current_dir)
-    data_dir = os.path.join(arc_root, 'data')
+    data_dir = os.path.join(current_dir, 'data')
     if not os.path.exists(data_dir):
         raise FileNotFoundError(f"Data directory not found at {data_dir}")
 
